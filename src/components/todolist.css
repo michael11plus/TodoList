@@ -59,10 +59,16 @@
 .page-todotask {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     width: 72%;
     border: solid 0.5px #e1c699;
     padding: 4px;
     font-size: small;
+    text-align: wrap;
+}
+
+.page-todotask-content {
+    width: 96%;
 }
 
 .page-todotask-delete {

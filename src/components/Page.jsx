@@ -5,7 +5,7 @@ const Page = () => {
 
     const [ todoInput, setTodoInput ] = useState('');
 
-    const [ todoArray, setTodoArray] = useState([]);
+    const [todoArray, setTodoArray] = useState([]);
 
     const handleTodoDisplay = () => {
         if (todoInput.trim()) {
@@ -21,6 +21,7 @@ const Page = () => {
     const handleDeletion = (index) => {
         setTodoArray(todoArray.filter((_, i) => i !==index));
       }
+      
     
     return(
         <div className='page'>
@@ -32,9 +33,9 @@ const Page = () => {
             
             <button className='page-submit' onClick={handleTodoDisplay}> Submit </button>
 
-            {todoArray.map((todo, index) => (
+            {todoArray.map((todoArray, index) => (
                 <div key={index} className='page-todotask'>
-                    {todoArray}
+                    <div className='page-todotask-content'>{todoArray}</div>
                     <div className='page-todotask-delete' onClick={() => {handleDeletion(index)}}>
                         ---
                     </div>
@@ -43,6 +44,7 @@ const Page = () => {
 
         </div>
     )
+
 }
 
 export default Page;
