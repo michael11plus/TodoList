@@ -1,0 +1,77 @@
+.navbar {
+    height: 120px;
+    border-bottom: solid #dedede;
+    display: flex;
+    justify-content: space-around;
+    align-items: center; 
+    color: #654321;
+}
+
+.navbar-logo {
+    height: 80px;
+}
+
+.navbar-description {
+    width: 280px;
+    font-size: 12px;
+    text-decoration: underline;
+    display: flex;
+    align-self: center;
+}
+
+.navbar-input {
+    border-radius: 4px;
+    padding: 4px;
+    border: #e1c699 0.5px solid;
+    color: #654321;
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    padding-top: 20px;
+    color: #654321;
+}
+
+.page-description {
+    width: auto;
+    text-decoration: underline ;
+}
+
+.page-input {
+    width: 72%;
+    border-radius: 4px;
+    border: #e1c699 0.5px solid;
+    padding: 4px;
+}
+
+.page-submit {
+    padding: 4px;
+    border-radius: 8px;
+    border: solid 0.5px;
+    background-color: #e1c699;
+    font-size: 10px;
+    cursor: pointer;
+}
+
+.page-todotask {
+    display: flex;
+    justify-content: space-between;
+    width: 72%;
+    border: solid 0.5px #e1c699;
+    padding: 4px;
+    font-size: small;
+}
+
+.page-todotask-delete {
+    cursor: pointer;
+    border: solid darkred 0.8px;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    text-align: center;
+    color: white;
+    background-color: rgb(250, 94, 94);
+}
