@@ -5,7 +5,7 @@ const Page = () => {
 
     const [ todoInput, setTodoInput ] = useState('');
 
-    const [todoArray, setTodoArray] = useState([]);
+    const [ todoArray, setTodoArray] = useState([]);
 
     const handleTodoDisplay = () => {
         if (todoInput.trim()) {
