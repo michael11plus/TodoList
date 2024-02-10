@@ -18,7 +18,7 @@ const Page = () => {
         setTodoInput(event.target.value);
       }
 
-      const handleDeletion = (index) => {
+    const handleDeletion = (index) => {
         setTodoArray(todoArray.filter((_, i) => i !==index));
       }
     
@@ -32,7 +32,7 @@ const Page = () => {
             
             <button className='page-submit' onClick={handleTodoDisplay}> Submit </button>
 
-            {todoArray.map((todoArray, index) => (
+            {todoArray.map((todo, index) => (
                 <div key={index} className='page-todotask'>
                     {todoArray}
                     <div className='page-todotask-delete' onClick={() => {handleDeletion(index)}}>
@@ -43,7 +43,6 @@ const Page = () => {
 
         </div>
     )
-
 }
 
 export default Page;
