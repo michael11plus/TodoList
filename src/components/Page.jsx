@@ -7,7 +7,8 @@ const Page = () => {
 
     const [todoArray, setTodoArray] = useState([]);
 
-    const handleTodoDisplay = () => {
+    const handleTodoDisplay = (event) => {
+        event.preventDefault();
         if (todoInput.trim()) {
             setTodoArray([...todoArray, todoInput.trim()]);
             setTodoInput('');
@@ -28,15 +29,16 @@ const Page = () => {
             <div className='page-description'>
                 enter task
             </div>
-            
-            <input type='text' value={todoInput} className='page-input' onChange={handleInputChange} />
-            
-            <button className='page-submit' onClick={handleTodoDisplay}> Submit </button>
+            <form onSubmit={handleTodoDisplay} className='page-form'>
+                <input type='text' value={todoInput} className='page-input' onChange={handleInputChange} />
+                
+                <button className='page-submit'> Submit </button>
+            </form>
 
             {todoArray.map((todoArray, index) => (
                 <div key={index} className='page-todotask'>
                     <div className='page-todotask-content'>{todoArray}</div>
-                    <div className='page-todotask-delete' onClick={() => {handleDeletion(index)}}>
+                    <div className='page-todotask-delete' onClick={() => {handleDeletion(index)} }>
                         ---
                     </div>
                 </div>
