@@ -1,5 +1,6 @@
 import './todolist.css';
 import { useState } from 'react';
+import Delete from '../assets/delete.png'
 
 const Page = () => {
 
@@ -31,16 +32,13 @@ const Page = () => {
             </div>
             <form onSubmit={handleTodoDisplay} className='page-form'>
                 <input type='text' value={todoInput} className='page-input' onChange={handleInputChange} />
-                
-                <button className='page-submit'> Submit </button>
+                <button type="button" class="btn btn-outline-success btn-sm">Submit</button>
             </form>
 
             {todoArray.map((todoArray, index) => (
                 <div key={index} className='page-todotask'>
                     <div className='page-todotask-content'>{todoArray}</div>
-                    <div className='page-todotask-delete' onClick={() => {handleDeletion(index)} }>
-                        ---
-                    </div>
+                    <img src={Delete} className='page-todotask-delete' onClick={() => {handleDeletion(index)} } alt='del' />
                 </div>
             ))}
 

@@ -45,7 +45,7 @@
     flex-direction: column;
     width: 400px;
     align-items: center;
-    gap: 12px;
+    gap: 16px;
 }
 
 .page-input {
